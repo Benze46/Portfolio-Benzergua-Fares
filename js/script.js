@@ -67,3 +67,52 @@ scrollToTopButton.addEventListener('click', (e) => {
         behavior: 'smooth' // Défilement fluide
     });
 });
+
+/*==================== scroll reveal pour la timeline ====================*/
+ScrollReveal().reveal('.timeline-container', {
+    delay: 300,
+    distance: '50px',
+    origin: 'bottom',
+    interval: 200, // Délai entre chaque élément
+});
+
+/*==================== scroll reveal pour les certifications ====================*/
+ScrollReveal().reveal('.certifications-box', {
+    delay: 300,
+    distance: '50px',
+    origin: 'bottom',
+    interval: 200, // Délai entre chaque élément
+});
+
+
+/*==================== scroll reveal pour les certifications ====================*/
+ScrollReveal().reveal('.certifications-box', {
+    delay: 300,
+    distance: '50px',
+    origin: 'bottom',
+    interval: 200, // Délai entre chaque élément
+});
+
+
+/*==================== Filtrage des documentations ====================*/
+const filterButtons = document.querySelectorAll('.filter-btn');
+const documentationBoxes = document.querySelectorAll('.documentations-box');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Retire la classe active de tous les boutons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Ajoute la classe active au bouton cliqué
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        documentationBoxes.forEach(box => {
+            if (filter === 'all' || box.classList.contains(filter)) {
+                box.style.display = 'block';
+            } else {
+                box.style.display = 'none';
+            }
+        });
+    });
+});

@@ -13,7 +13,7 @@
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
-  --main-color: #0ef;
+  --main-color: rgb(0, 238, 255);
 }
 *::selection {
   background: var(--main-color);
@@ -247,35 +247,43 @@ span {
     margin: 1rem 0 3rem;
 }
 
+/* Section Portfolio */
 .portfolio {
     background: var(--second-bg-color);
-    padding: 4rem 0; /* Ajout de padding pour espacer la section */
+    padding: 6rem 9%;
 }
 
 .portfolio h2 {
+    text-align: center;
+    font-size: 4.5rem;
     margin-bottom: 4rem;
-    text-align: center; /* Centrer le titre */
+}
+
+.portfolio h2 span {
+    color: var(--main-color);
 }
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes comme dans les certifications */
     align-items: center;
     gap: 2.5rem;
-    padding: 0 2rem; /* Ajout de padding pour éviter que les éléments touchent les bords */
 }
 
-.portfolio-container .portfolio-box {
+.portfolio-box {
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-    transition: transform 0.5s ease; /* Ajout d'une transition pour l'effet de survol */
+    transition: transform 0.5s ease;
+    height: 250px; /* Hauteur fixe pour correspondre aux certifications */
 }
 
 .portfolio-box img {
     width: 100%;
+    height: 100%; /* Assure que l'image remplit toute la boîte */
+    object-fit: cover; /* Empêche la déformation de l'image */
     transition: transform 0.5s ease;
 }
 
@@ -283,13 +291,13 @@ span {
     transform: scale(1.1);
 }
 
-.portfolio-box .portfolio-layer {
+.portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,16 +305,16 @@ span {
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
-    transition: transform 0.5s ease; /* Ajout d'une transition pour l'effet de survol */
+    transition: transform 0.5s ease;
 }
 
 .portfolio-box:hover .portfolio-layer {
-    transform: translateY(0); /* Faire apparaître la couche au survol */
+    transform: translateY(0);
 }
 
 .portfolio-layer h4 {
     font-size: 3rem;
-    margin-bottom: 1rem; /* Ajout de marge pour espacer les éléments */
+    margin-bottom: 1rem;
 }
 
 .portfolio-layer p {
@@ -322,11 +330,11 @@ span {
     height: 5rem;
     background: var(--text-color);
     border-radius: 50%;
-    transition: background 0.3s ease; /* Ajout d'une transition pour l'effet de survol */
+    transition: background 0.3s ease;
 }
 
 .portfolio-layer a:hover {
-    background: var(--main-color); /* Changement de couleur au survol */
+    background: var(--main-color);
 }
 
 .portfolio-layer a i {
@@ -476,7 +484,140 @@ span {
     color: var(--second-bg-color);
 }
 
+/* Section Documentations */
+.documentations {
+    background: var(--second-bg-color);
+    padding: 6rem 9%;
+}
 
+.documentations h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.documentations h2 span {
+    color: var(--main-color);
+}
+
+/* Filtres */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+
+/* Filtres */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 2rem;
+    background: var(--main-color); /* Fond en couleur principale */
+    color: var(--second-bg-color); /* Texte en couleur secondaire */
+    border: none; /* Pas de bordure */
+    border-radius: 0.5rem; /* Coins arrondis */
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif; /* Même police que "En savoir plus" */
+    font-weight: 600; /* Poids de la police (gras) */
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Animation */
+    box-shadow: 0 0 1rem var(--main-color); /* Ombre portée */
+}
+
+.filter-btn.active {
+    background: var(--main-color); /* Fond en couleur principale */
+    box-shadow: 0 0 1rem var(--main-color); /* Ombre portée */
+}
+
+.filter-btn:hover {
+    background: var(--main-color); /* Fond en couleur principale au survol */
+    box-shadow: 0 0 1.5rem var(--main-color); /* Ombre portée plus intense au survol */
+}
+/* Conteneur des documentations */
+.documentations-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.documentations-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 250px; /* Hauteur fixe pour correspondre aux certifications */
+}
+
+.documentations-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.documentations-box:hover img {
+    transform: scale(1.1);
+}
+
+.documentations-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.documentations-box:hover .documentations-layer {
+    transform: translateY(0);
+}
+
+.documentations-layer h4 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.documentations-layer p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+}
+
+.documentations-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.documentations-layer a:hover {
+    background: var(--main-color);
+}
+
+.documentations-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
 
 
 
@@ -744,4 +885,337 @@ span {
         text-align: center;
         margin-top: 2rem;
     }
+}
+
+.timeline {
+    background: var(--bg-color); /* Couleur de fond */
+    padding: 6rem 9%; /* Espacement interne */
+}
+
+.timeline h2 {
+    text-align: center; /* Centrer le titre */
+    font-size: 4.5rem; /* Taille du titre */
+    margin-bottom: 4rem; /* Marge en bas */
+}
+
+.timeline h2 span {
+    color: var(--main-color); /* Couleur du span */
+}
+
+.timeline-container-wrapper {
+    display: flex; /* Disposition en flexbox */
+    justify-content: space-between; /* Espace entre les timelines */
+    gap: 4rem; /* Espace entre les timelines */
+    max-width: 1200px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrer le conteneur */
+}
+
+.timeline-container {
+    position: relative;
+    width: 48%; /* Largeur de chaque timeline */
+    padding-left: 2rem; /* Espace pour la ligne */
+}
+
+.timeline-title {
+    font-size: 2.6rem; /* Taille du titre de la timeline */
+    color: var(--main-color); /* Couleur du titre */
+    margin-bottom: 2rem; /* Marge en bas */
+    text-align: center; /* Centrer le titre */
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px; /* Épaisseur de la ligne */
+    height: 100%;
+    background: var(--main-color); /* Couleur de la ligne */
+}
+
+.timeline-items {
+    position: relative;
+    padding-left: 2rem; /* Alignement avec la ligne */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem; /* Espace entre les éléments */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -16px; /* Position du point */
+    top: 10px;
+    width: 12px; /* Taille du point */
+    height: 12px;
+    background: var(--main-color); /* Couleur du point */
+    border-radius: 50%; /* Forme ronde */
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--second-bg-color); /* Couleur de fond */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.timeline-content h4 {
+    font-size: 2rem; /* Taille du titre */
+    color: var(--main-color); /* Couleur du titre */
+    margin-bottom: 1rem; /* Marge en bas */
+}
+
+.timeline-content p {
+    font-size: 1.6rem; /* Taille du texte */
+    color: var(--text-color); /* Couleur du texte */
+    margin-bottom: 0.5rem; /* Marge en bas */
+}
+
+.timeline-content p strong {
+    color: var(--main-color); /* Couleur pour les dates */
+}
+
+
+/* Animation d'apparition des éléments de la timeline */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item {
+    opacity: 0; /* Masquer les éléments au départ */
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Délai pour chaque élément de la timeline */
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
+.timeline-item:nth-child(4) { animation-delay: 0.8s; }
+
+/* Animation de la ligne de la timeline */
+@keyframes drawLine {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.timeline-line {
+    animation: drawLine 1.5s ease forwards;
+}
+
+/* Effet de survol sur les éléments de la timeline */
+.timeline-content {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 238, 255, 0.3);
+}
+
+/* Animation des points de la timeline */
+.timeline-item::before {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.2);
+    background-color: var(--main-color);
+}
+
+/* Section Certifications */
+.certifications {
+    background: var(--second-bg-color);
+    padding: 6rem 9%;
+}
+
+.certifications h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.certifications h2 span {
+    color: var(--main-color);
+}
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.certifications-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.certifications-box img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.certifications-box:hover img {
+    transform: scale(1.1);
+}
+
+.certifications-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.certifications-box:hover .certifications-layer {
+    transform: translateY(0);
+}
+
+.certifications-layer h4 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.certifications-layer p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+}
+
+.certifications-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.certifications-layer a:hover {
+    background: var(--main-color);
+}
+
+.certifications-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+/* Animation d'apparition des certifications */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.certifications-box {
+    opacity: 0; /* Masquer les éléments au départ */
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Délai pour chaque élément */
+.certifications-box:nth-child(1) { animation-delay: 0.2s; }
+.certifications-box:nth-child(2) { animation-delay: 0.4s; }
+.certifications-box:nth-child(3) { animation-delay: 0.6s; }
+.certifications-box:nth-child(4) { animation-delay: 0.8s; }
+
+
+/* Section Stages */
+.stages {
+    background: var(--bg-color); /* Couleur de fond */
+    padding: 6rem 9%;
+}
+
+.stages h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.stages h2 span {
+    color: var(--main-color); /* Couleur du span */
+}
+
+.stages-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stages-box {
+    flex: 1 1 45rem;
+    background: var(--second-bg-color); /* Couleur de fond des boîtes */
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color); /* Ombre portée */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stages-box:hover {
+    transform: translateY(-10px); /* Effet de levée au survol */
+    box-shadow: 0 0 2rem var(--main-color); /* Ombre portée plus intense au survol */
+}
+
+.stages-box h3 {
+    font-size: 2.6rem;
+    color: var(--main-color); /* Couleur du titre */
+    margin-bottom: 1.5rem;
+}
+
+.stages-box p {
+    font-size: 1.6rem;
+    color: var(--text-color); /* Couleur du texte */
+    margin-bottom: 2rem;
+}
+
+.stages-box strong {
+    color: var(--main-color); /* Couleur pour les éléments en gras */
+}
+
+.stages-box .btn {
+    margin-top: 1rem;
+}
+
+
+/* Paragraphe descriptif de la section Stages */
+.stages-description {
+    font-size: 1.6rem;
+    color: var(--text-color); /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    max-width: 800px; /* Largeur maximale pour une meilleure lisibilité */
+    margin: 0 auto 4rem; /* Centrer et ajouter une marge en bas */
+    line-height: 1.6; /* Espacement des lignes */
 }

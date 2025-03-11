@@ -23,7 +23,7 @@
             <a href="#accueil" class="active">Accueil</a>
             <a href="#profil">Profil</a>
             <a href="#veilletechno">Veille Technologique</a>
-            <a href="#documentations">Documentations</a>
+            <a href="#documentations">Réalisations</a>
             <a href="#btssio">BTS SIO</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -34,8 +34,7 @@
         <h3>Bonjour, je suis</h3>
         <h1>Fares Benzergua</h1>
         <h3>Et je suis étudiant en 2ème année de<span class="multiple-text"> BTS SIO </span></h3>
-        <p> Passionné par l'informatique et les nouvelles technologies depuis mon plus jeune âge, j'ai naturellement orienté 
-             mon parcours vers ce domaine afin de développer mes compétences et de me préparer à une carrière dans la cybersécurité.</p>
+        <p> Passionné par l’informatique et les nouvelles technologies, j’ai orienté mon parcours vers ce domaine pour approfondir mes compétences et me spécialiser en cybersécurité, un secteur clé où l’innovation et la sécurité sont primordiales.</p>
             
              <div class="social-media">
                 <a href="mailto:benzerguafares@gmail.com"><i class='bx bxl-gmail'></i></a>
@@ -57,14 +56,12 @@
     <!-- about section design -->
 <section class="about" id="profil">
     <div class="about-img">
-        <img src="images/about.png" alt="">
+        <img src="images/who.png" alt="">
     </div>
     <div class="about-content">
         <h2 class="heading">À propos de <span>Moi</span></h2>
-        <h3>Étudiant en BTS SIO</h3>
-        <p>(Services Informatiques aux Organisations), spécialité SISR (Solutions d'Infrastructure, Systèmes et Réseaux) au lycée Léonard de Vinci à Melun. 
-            Passionné par l'informatique et les nouvelles technologies depuis mon plus jeune âge, 
-            j'ai naturellement orienté mon parcours vers ce domaine afin de développer mes compétences et de me préparer à une carrière dans les systèmes et réseaux.</p>
+        <h3>Étudiant en BTS SIO Option SISR</h3>
+        <p> Au fil de mes études en BTS SIO, j’ai acquis des compétences techniques solides en administration des systèmes et des réseaux, ainsi qu’en gestion de la sécurité informatique. Mes stages en entreprise m’ont permis d’appliquer ces connaissances sur le terrain et de développer ma capacité à résoudre des problèmes concrets tout en travaillant en équipe.</p>
             <a href="profil-detail.html" class="btn" target="_blank" rel="noopener noreferrer">En savoir plus</a>
     </div>
 </section>
@@ -104,62 +101,96 @@
  
 
 <!-- portfolio section design -->
-<section class="portfolio" id="documentations">
-    <h2 class="heading">Mes <span>Documentations</span></h2>
-    <div class="portfolio-container">
-        <div class="portfolio-box">
-            <img src="images/windows10.jpg" alt="">
-            <div class="portfolio-layer">
-                <h4>Boot windows10</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam.</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
+<!-- Section Documentations -->
+<section class="documentations" id="documentations">
+    <h2 class="heading">Mes <span>Réalisations</span></h2>
+
+    <!-- Filtres pour les catégories -->
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">Voir tout</button>
+        <button class="filter-btn" data-filter="formation">Formation</button>
+        <button class="filter-btn" data-filter="professionnelle">Professionnelle</button>
+        <button class="filter-btn" data-filter="personnelle">Personnelle</button>
+    </div>
+
+    <!-- Conteneur des documentations -->
+    <div class="documentations-container">
+        <!-- Documentation 1 -->
+        <div class="documentations-box professionnelle">
+            <img src="images/windows10.jpg" alt="Windows 10">
+            <div class="documentations-layer">
+                <h4>Boot Windows 10</h4>
+                <p>Guide pour installer et configurer Windows 10 via le réseau.</p>
+                <a href="documents/Procédure installation WINDOWS 10.pdf" target="_blank"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
 
-        <div class="portfolio-box">
-            <img src="images/winserv.jpg" alt="">
-            <div class="portfolio-layer">
-                <h4>Boot windows10</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam.</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
+        <!-- Documentation 2 -->
+        <div class="documentations-box formation">
+            <img src="images/winserv.jpg" alt="Windows Server">
+            <div class="documentations-layer">
+                <h4>Windows Server</h4>
+                <p>Installion et configuration d'un serveur Windows 2022.</p>
+                <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
 
-        <div class="portfolio-box">
-            <img src="images/dhcp.png" alt="">
-            <div class="portfolio-layer">
-                <h4>Boot windows10</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam.</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
+        <!-- Documentation 3 -->
+        <div class="documentations-box formation">
+            <img src="images/dhcp.png" alt="DHCP">
+            <div class="documentations-layer">
+                <h4>Configuration DHCP</h4>
+                <p>Guide pour configurer un serveur DHCP.</p>
+                <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
 
-        <div class="portfolio-box">
-            <img src="images/domaine.jpg" alt="">
-            <div class="portfolio-layer">
-                <h4>Boot windows10</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam.</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
+        <!-- Documentation 4 -->
+        <div class="documentations-box formation">
+            <img src="images/domaine.jpg" alt="Domaine">
+            <div class="documentations-layer">
+                <h4>Gestion de domaine</h4>
+                <p>Guide pour configurer un domaine Active Directory.</p>
+                <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
 
-        <div class="portfolio-box">
-            <img src="images/powershell.jpeg" alt="">
-            <div class="portfolio-layer">
-                <h4>Boot windows10</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam.</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
+        <!-- Documentation 5 -->
+        <div class="documentations-box formation">
+            <img src="images/powershell.jpeg" alt="PowerShell">
+            <div class="documentations-layer">
+                <h4>Scripting PowerShell</h4>
+                <p>Script de gestion des utilisateurs d'un AD.</p>
+                <a href="documents/Powershell_ScriptAD.pdf" target="_blank"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
 
-        <div class="portfolio-box">
-            <img src="images/server-d-impression-1.jpg" alt="">
-            <div class="portfolio-layer">
-                <h4>Boot windows10</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam.</p>
-                <a href="#"><i class='bx bx-link-external'></i></a>
+        <!-- Documentation 6 -->
+        <div class="documentations-box professionnelle">
+            <img src="images/server-d-impression-1.jpg" alt="Serveur d'impression">
+            <div class="documentations-layer">
+                <h4>Serveur d'impression</h4>
+                <p>Guide pour configurer un serveur d'impression.</p>
+                <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
+        <!-- Documentation 7 -->
+        <div class="documentations-box professionnelle">
+            <img src="images/logo-glpi.png" alt="GLPI">
+            <div class="documentations-layer">
+                <h4>Procédure de demande d'assistance sur GLPI</h4>
+                <p>Guide pour une demande d'assistance sur GLPI.</p>
+                <a href="documents/Procedure_Assistance_Signoret.pdf" target="_blank"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+        <!-- Documentation 8 -->
+        <div class="documentations-box professionnelle">
+            <img src="images/ad.jpg" alt="GLPI">
+            <div class="documentations-layer">
+                <h4>Ajout d'un poste Windows 10 dans un domaine</h4>
+                <p>Guide pour ajouter un poste Windows 10 dans un domaine.</p>
+                <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
+            </div>
     </div>
 </section>
 
@@ -226,7 +257,7 @@
     <!-- footer design -->
 <footer class="footer">
     <div class="footer-text">
-        <p>Copyright & Copy; 2025 by Benzergua Fares | Tous droits réservés.</p>
+        <p>Copyright 2025 par Benzergua Fares | Tous droits réservés.</p>
     </div>
 
     <div class="footer-iconTop">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détails du Profil</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Lien vers ton fichier CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
@@ -21,15 +22,158 @@
         </nav>
     </header>
 
-    <section class="details">
-        <h2>Détails du Profil</h2>
-        <p>Voici plus d'informations sur mon parcours, mes compétences et mes projets.</p>
-        <!-- Ajoute ici le contenu détaillé de ton profil -->
+    <!-- Section Timeline (Parcours) -->
+    <section class="timeline" id="parcours">
+        <h2 class="heading">Mon <span>Parcours</span></h2>
+        <div class="timeline-container-wrapper">
+            <!-- Timeline Expériences Professionnelles -->
+            <div class="timeline-container">
+                <h3 class="timeline-title">Expériences Professionnelles</h3>
+                <div class="timeline-line"></div>
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Technicien Informatique – Stage – Lycée Simone Signoret</h4>
+                            <p><strong>Janvier 2025 - Février 2025</strong></p>
+                            <p>
+                                - Administration des utilisateurs et des droits dans Active Directory.<br>
+                                - Supervision du réseau et diagnostic avancé des problèmes de connectivité.<br>
+                                - Installation et maintenance des équipements informatiques (PC, imprimantes, vidéoprojecteurs).<br>
+                                - Optimisation du déploiement des postes via GPO et images systèmes.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Technicien Informatique – Stage – Lycée Simone Signoret</h4>
+                            <p><strong>Mai 2024 - Juin 2024</strong></p>
+                            <p>
+                                - Maintenance et administration du réseau informatique de l’établissement (configuration de routeurs, commutateurs, et points d’accès).<br>
+                                - Gestion des utilisateurs sur Active Directory (création de comptes, attribution des droits).<br>
+                                - Mise à jour des systèmes d’exploitation et des logiciels sur les postes de travail.<br>
+                                - Assistance aux utilisateurs dans la résolution des problèmes de connexion réseau et de matériel.<br>
+                                - Participation à la mise en place de la sécurité réseau (pare-feu, filtrage des adresses MAC).<br>
+                                - Diagnostic et dépannage des pannes matérielles et logicielles sur les postes de travail.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Timeline Formations -->
+            <div class="timeline-container">
+                <h3 class="timeline-title">Formations</h3>
+                <div class="timeline-line"></div>
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>BTS – Services Informatique aux Organisations</h4>
+                            <p><strong>Depuis septembre 2023</strong></p>
+                            <p>Lycée Léonard de Vinci, Melun</p>
+                        </div>
+                    </div>
+    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>1ère année de Licence Mathématiques-Informatique</h4>
+                            <p><strong>Septembre 2022 - Juin 2023</strong></p>
+                            <p>Université Gustave Eiffel, Champs-sur-Marne</p>
+                        </div>
+                    </div>
+    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Bac Scientifique</h4>
+                            <p><strong>Septembre 2019 - Juillet 2022</strong></p>
+                            <p>Lycée Georges Sand, Le Mée-sur-Seine</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Section Certifications -->
+    <section class="certifications" id="certifications">
+        <h2 class="heading">Mes <span>Certifications</span></h2>
+        <div class="certifications-container">
+            <div class="certifications-box">
+                <img src="images/pix.jpg" alt="Certification 1">
+                <div class="certifications-layer">
+                    <h4>Certification Pix</h4>
+                    <p>Certification Pix obtenue en 2025.</p>
+                    <a href="documents/attestation-pix-2025.pdf" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="certifications-box">
+                <img src="images/cisco.png" alt="Certification 2">
+                <div class="certifications-layer">
+                    <h4>Certification Cisco : Introduction to cybersecurity</h4>
+                    <p>Certification Cisco : Introduction to cybersecurity obtenue en 2025.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="certifications-box">
+                <img src="images/secnum.png" alt="Certification 3">
+                <div class="certifications-layer">
+                    <h4>Certification Secnum Académie</h4>
+                    <p>Certification Secnum Académie obtenue en 2025.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Section Stages -->
+<section class="stages" id="stages">
+    <h2 class="heading">Mes <span>Stages</span></h2>
+
+    <!-- Paragraphe descriptif -->
+    <p class="stages-description">
+        Le Lycée Simone Signoret est un établissement d'enseignement général, technologique et professionnel situé à Vaux-le-Pénil (77000), en Seine-et-Marne. Il propose diverses filières, allant du baccalauréat général aux formations professionnelles et technologiques. L’établissement se distingue par son engagement dans la réussite de ses élèves et son dynamisme pédagogique.
+    </p>
+
+    <div class="stages-container">
+        <!-- Stage 1 -->
+        <div class="stages-box">
+            <h3>Stage 2024</h3>
+            <p>
+                <strong>Lycée Simone Signoret</strong><br>
+                <strong>Dates :</strong> Mai 2024 - Juin 2024<br>
+                <strong>Description :</strong><br>
+                - Maintenance et administration du réseau informatique de l’établissement.<br>
+                - Gestion des utilisateurs sur Active Directory.<br>
+                - Mise à jour des systèmes d’exploitation et des logiciels.<br>
+                - Assistance aux utilisateurs dans la résolution des problèmes de connexion réseau et de matériel.<br>
+                - Participation à la mise en place de la sécurité réseau (pare-feu, filtrage des adresses MAC).<br>
+                - Diagnostic et dépannage des pannes matérielles et logicielles sur les postes de travail.
+            </p>
+            <a href="documents/rapport_stage_2024.pdf" class="btn" target="_blank">Rapport de stage 2024</a>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="stages-box">
+            <h3>Stage 2025</h3>
+            <p>
+                <strong>Lycée Simone Signoret</strong><br>
+                <strong>Dates :</strong> Janvier 2025 - Février 2025<br>
+                <strong>Description :</strong><br>
+                - Administration des utilisateurs et des droits dans Active Directory.<br>
+                - Supervision du réseau et diagnostic avancé des problèmes de connectivité.<br>
+                - Installation et maintenance des équipements informatiques (PC, imprimantes, vidéoprojecteurs).<br>
+                - Optimisation du déploiement des postes via GPO et images systèmes.
+            </p>
+            <a href="documents/rapport_stage_2025.pdf" class="btn" target="_blank">Rapport de stage 2025</a>
+        </div>
+    </div>
+</section>
+    
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2025 par Benzergua Fares | Tous droits réservés.</p>
+            <p>Copyright 2025 par Benzergua Fares | Tous droits réservés.</p>
         </div>
         <div class="footer-iconTop">
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
