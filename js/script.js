@@ -116,3 +116,10 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+ScrollReveal().reveal('.veille-box', {
+    delay: 300,
+    distance: '50px',
+    origin: 'bottom',
+    interval: 200
+});

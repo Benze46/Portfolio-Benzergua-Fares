@@ -1219,3 +1219,194 @@ span {
     margin: 0 auto 4rem; /* Centrer et ajouter une marge en bas */
     line-height: 1.6; /* Espacement des lignes */
 }
+
+/* Veille Technologique Section */
+.veille {
+    background: var(--bg-color);
+    padding: 6rem 9%;
+}
+
+.veille-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.veille-box {
+    background: var(--second-bg-color);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.veille-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.veille-box h3 {
+    font-size: 2.6rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.veille-box h4 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 2rem 0 1rem;
+}
+
+.veille-box p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.pearltrees-embed {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.pearltrees-note {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: var(--main-color);
+}
+
+.veille-list {
+    list-style: none;
+}
+
+.veille-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.veille-list i {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.veille-list h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.veille-list p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .veille-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.center-title {
+    text-align: center;
+    width: 100%;
+    margin: 2rem 0 1rem;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.veille-title {
+    font-size: 2.6rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 238, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(0, 238, 255, 0.7);
+    }
+}
+
+/* Option : Barre animée sous le titre */
+.veille-title::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    margin: 0.5rem auto 0;
+    transition: width 0.5s ease;
+}
+
+.veille-box:hover .veille-title::after {
+    width: 100px;
+}
+
+/* Section Tableau de Synthèse */
+.synthese {
+    background: var(--second-bg-color);
+    padding: 6rem 9%;
+}
+
+.synthese-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--bg-color);
+    border-radius: 2rem;
+    box-shadow: 0 0 1.5rem rgba(0, 238, 255, 0.2);
+}
+
+.pdf-viewer {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.pdf-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pdf-actions .btn {
+    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pdf-actions .btn i {
+    font-size: 1.8rem;
+}
+
+.synthese-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
